@@ -5,6 +5,8 @@ HWND hwnd;
 BOOL WINAPI Hook_WriteProcessMemory(HANDLE hProcess, LPVOID lpBaseAddress, LPCVOID lpBuffer, SIZE_T nSize, SIZE_T* lpNumberOfBytesWritten)
 {
 	Suspend_HOOK();
+	if (!IsWindow(hwnd))
+		hwnd = FindWindow(NULL, L"MsgMonitor");
 	if (IsWindow(hwnd))
 	{
 		COPYDATASTRUCT data;

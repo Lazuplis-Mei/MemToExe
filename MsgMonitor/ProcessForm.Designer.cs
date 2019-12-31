@@ -50,12 +50,12 @@ namespace MsgMonitor
             this.columnHeader2,
             this.columnHeader3});
             this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(16, 15);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(562, 357);
+            this.listView1.Size = new System.Drawing.Size(422, 286);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -80,10 +80,9 @@ namespace MsgMonitor
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(33, 380);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(25, 304);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 30);
+            this.button1.Size = new System.Drawing.Size(112, 24);
             this.button1.TabIndex = 1;
             this.button1.Text = "选择";
             this.button1.UseVisualStyleBackColor = true;
@@ -91,10 +90,9 @@ namespace MsgMonitor
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(217, 380);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(163, 304);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 30);
+            this.button2.Size = new System.Drawing.Size(112, 24);
             this.button2.TabIndex = 2;
             this.button2.Text = "刷新";
             this.button2.UseVisualStyleBackColor = true;
@@ -102,10 +100,9 @@ namespace MsgMonitor
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(399, 380);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(299, 304);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 30);
+            this.button3.Size = new System.Drawing.Size(112, 24);
             this.button3.TabIndex = 3;
             this.button3.Text = "取消";
             this.button3.UseVisualStyleBackColor = true;
@@ -113,18 +110,18 @@ namespace MsgMonitor
             // 
             // ProcessForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 421);
+            this.ClientSize = new System.Drawing.Size(443, 337);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ProcessForm";
-            this.Text = "选择窗口";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "选择进程";
             this.Load += new System.EventHandler(this.ProcessForm_Load);
             this.ResumeLayout(false);
 
