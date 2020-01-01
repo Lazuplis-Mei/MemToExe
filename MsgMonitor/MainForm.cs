@@ -1050,7 +1050,7 @@ namespace MsgMoniter
 
         private void SaveProject(string filePath)
         {
-            using (FileStream writer = File.OpenWrite(filePath))
+            using (FileStream writer = File.Open(filePath, FileMode.Create, FileAccess.Write))
             {
                 writer.Write(".lvi");
                 writer.Write(MsgList.Items.Count);
