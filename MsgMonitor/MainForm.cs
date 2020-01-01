@@ -836,8 +836,11 @@ namespace MsgMoniter
                             int pos = (int)wmInfo.Address - targetModule.BaseAddress.ToInt32();
                             if (pos < 0 || pos > targetModule.ModuleMemorySize)
                                 inVaildCount++;
-                            stream.Seek(pos, SeekOrigin.Begin);
-                            stream.Write(wmInfo.ByteArray, 0, wmInfo.ByteArray.Length);
+                            else
+                            {
+                                stream.Seek(pos, SeekOrigin.Begin);
+                                stream.Write(wmInfo.ByteArray, 0, wmInfo.ByteArray.Length);
+                            }
                         }
                         if (inVaildCount > 0)
                         {
@@ -872,8 +875,11 @@ namespace MsgMoniter
                             int pos = (int)wmInfo.Address - targetModule.BaseAddress.ToInt32();
                             if (pos < 0 || pos > targetModule.ModuleMemorySize)
                                 inVaildCount++;
-                            stream.Seek(pos, SeekOrigin.Begin);
-                            stream.Write(wmInfo.ByteArray, 0, wmInfo.ByteArray.Length);
+                            else
+                            {
+                                stream.Seek(pos, SeekOrigin.Begin);
+                                stream.Write(wmInfo.ByteArray, 0, wmInfo.ByteArray.Length);
+                            }
                         }
                         if (inVaildCount > 0)
                         {
